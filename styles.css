@@ -1,0 +1,885 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(Thin.otf);
+}
+
+@font-face{
+    font-family: mySecondFont;
+    src: url(mont.otf);
+}
+
+@font-face{
+    font-family: myThirdFont;
+    src: url(mont-light.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: myThirdFont;
+}
+
+body{
+	margin: 0;
+}
+
+/*----------------------- Logo and navigation --------------------------*/
+.logo{
+    color: white;
+    font-family: myFirstFont;
+    font-size: 2em;
+    margin-top: -5px;
+    padding: 10px;
+    margin-left: -2%;
+}
+
+#header{
+}
+
+.container{
+    padding: 10px 2%;
+    background-image: linear-gradient(to right, #4ebee0, #4ad54c);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+
+.fa-phone{
+    margin-left: -80px;
+    color: white;
+}
+
+.fa-user{
+    color: white;
+}
+
+#sidemenu{
+    
+}
+
+
+button{
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul li{
+    margin-top: 10px;
+    padding: 10px;
+    height: 30px;
+    display: inline-block;
+    width: 40px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #4ebee0;
+}
+
+.flight-logo{
+    position: absolute;
+    margin-top: -430px;
+    margin-left: 360px;
+    text-shadow: 15px 15px;
+    width:90px;
+}
+
+.logo-slogan{
+    position: absolute;
+    z-index: 500;
+    color: white;
+    margin-top: -448px;
+    margin-left: 470px;
+    font-weight: 700;
+}
+
+.title-logo-slogan{
+    font-size: 25px;
+    padding: 25px 0px;
+    letter-spacing: 3px;
+}
+
+.p-logo-slogan{
+    font-size: 20px;
+}
+
+/*-------------------------search area for flight ---------------------------*/
+
+.container-tokyo{
+   width:1903px;
+   height:500px;
+   object-fit:cover;
+   object-position:50% 50%;
+}
+
+#rectangle{
+    position: absolute;
+    width:1200px;
+    height:200px;
+    background: white;
+    z-index: 100;
+    margin-top: -280px;
+    margin-left: 350px;
+    border-radius: 20px;
+}
+
+.line{
+    border-top: 1px solid lightgrey;
+    margin-top: 60px;
+}
+
+.tab-titles{
+    display: flex;  
+    margin-right: -50px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: -36px;
+    font-family: myFirstFont;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 23px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+    color: grey;
+}
+
+.fa-solid{
+    padding: 0 2px;
+    font-size: 20px;
+}
+
+.tab-links.active-link{
+    color: #17EABD;
+}
+
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height:3px;
+    background: #17EABD;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+
+.flights{
+    color: grey;
+}
+
+/*----------------------- search bars -------------------------*/
+
+.city-airport-button{
+    cursor: pointer;
+}
+
+.tab-contents{
+    position: relative;
+    display: flex;
+    display: inline-flex;
+    margin-top: 60px;
+    margin-left: 25px;
+    gap: 20px;
+}
+
+.destination-button{
+    left: 10px;
+}
+
+
+label{
+    position: absolute;
+    color: rgb(116, 116, 124);
+    cursor: pointer;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    transition: color 0.2s ease 0s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-left: 8px;
+    font-size: 12px;
+    margin-top: 5px;
+    z-index:300;
+}
+
+
+input{
+    background: transparent;
+    background-color: #F5F5F5;
+    border: none;
+    color: rgb(60, 60, 60);
+    cursor: pointer;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    height: unset;
+    line-height: 24px;
+    margin: 0px;
+    outline: none;
+    padding: 26px 10px 10px 6px;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    transition: box-shadow 0.2s ease 0s;
+    width: 100%;
+    width: 210px;
+    height: 20px;
+    margin-left: 0px;
+    border-radius: 10px;
+
+}
+
+/*--------------------------- Flights hub --------------------------*/
+
+.hub{
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 160px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+strong{
+    position: absolute;
+    margin-left: 0px;
+    font-size: 14px;
+}
+
+span{
+    margin-top: 50px;
+    font-size: 14px;
+    color: grey;
+}
+
+.plane-full-flexibility{
+    white-space: nowrap;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -90px;
+    margin-top: -5px;
+}
+
+.laptop-easy-access{
+    white-space: nowrap;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -90px;
+    margin-top: -22px;
+}
+
+.shield-total-protection{
+    white-space: nowrap;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -90px;
+    margin-top: -4px;
+}
+
+.assessment-personal-fares{
+    white-space: nowrap;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -100px;
+    margin-top: -4px;
+}
+
+/*------------------ why us and type of flight destinations --------------------*/
+
+.grey-background{
+    margin-top: 800px;
+    background-color: #F3F3F3;
+      height: 40%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+}
+
+
+
+.why-us{
+    white-space: nowrap;
+    position:absolute;
+    width: inherit;
+    color: #404040;
+    margin-top: 120px;
+    margin-left: 360px;
+    margin-right: 900px;
+    font-size: 35px;
+    z-index:300;
+}
+
+.heading-why-us{
+    white-space: nowrap;
+    font-size: 50px;
+}
+
+
+
+.why-us-paragraph{
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.div-popular-flight-destinations{
+    white-space: nowrap;
+    width: inherit;
+    color: black;
+    margin-top: 600px;
+    margin-left: 360px;
+    margin-right: 900px;
+    font-size: 25px;
+}
+
+.popular-flight-destinations-images-container{
+    display: flex;
+    gap: 20px;
+    padding: 30px 0px;
+    border-radius: 10px;
+}
+
+.paris-flight-destination{
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    filter: brightness(50%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.p-paris-flight-destination{
+    position: absolute;
+    color: white;
+    margin-left: 46px;
+    margin-top: 115px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: mySecondFont;
+}
+
+.paris-flight-destination:hover{
+    transform: scale(1.1);
+}
+
+label{
+    pointer-events: none;
+}
+
+.dubai-flight-destination{
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.p-dubai-flight-destination{
+    position: absolute;
+    color: white;
+    margin-left: 247px;
+    margin-top: 115px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: mySecondFont;
+}
+
+.dubai-flight-destination:hover{
+    transform: scale(1.1);
+}
+
+.newyork-flight-destination{
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.p-newyork-flight-destination{
+    position: absolute;
+    color: white;
+    margin-left: 429px;
+    margin-top: 115px;
+    font-weight: 600;
+    font-size: 15px;
+    z-index:500;
+    justify-content: center;
+    text-align: center;
+    font-family: mySecondFont;
+}
+
+.newyork-flight-destination:hover{
+    transform: scale(1.1);
+}
+
+.istanbul-flight-destination{
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.p-istanbul-flight-destination{
+    position: absolute;
+    color: white;    
+    margin-left: 618px;
+    margin-top: 115px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: mySecondFont;
+}
+
+.istanbul-flight-destination:hover{
+    transform: scale(1.1);
+}
+
+.barcelona-flight-destination{
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.p-barcelona-flight-destination{
+    position: absolute;
+    color: white;
+    margin-left: 800px;
+    margin-top: 115px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: mySecondFont;
+}
+
+.barcelona-flight-destination:hover{
+    transform: scale(1.1);
+}
+
+.venice-flight-destination{
+    width: 200px;
+    height:250px;
+    border-radius: 10px;
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.p-venice-flight-destination{
+    position: absolute;
+    color: white;
+    margin-left: 1010px;
+    margin-top: 115px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: mySecondFont;
+}
+
+.venice-flight-destination:hover{
+    transform: scale(1.1);
+}
+
+.three-images{
+    display: flex;
+    width:100;
+    height: auto;
+    gap: 34px;
+    margin-left: 360px;
+}
+
+.japan-three-images{
+    width: 360px;
+    height:250px;
+    border-radius: 10px;
+}
+
+.hawaii-images{
+    width: 360px;
+    height:250px;
+    border-radius: 10px;
+}
+
+.tokyo-images{
+    width: 360px;
+    height:250px;
+    border-radius: 10px;
+}
+
+.under-image-hawaii{
+    position:absolute;
+    margin-top:260px;
+    font-size: 10px;
+    width: 390px;
+}
+
+.under-image-tokyo{
+    position:absolute;
+    margin-top:260px;
+    margin-left: 393px;
+    font-size: 10px;
+    width: 390px;
+}
+
+.under-image-onsen{
+    position:absolute;
+    margin-top:260px;
+    margin-left: 788px;
+    font-size: 10px;
+    width: 390px;
+}
+
+
+.book-today{
+    position: absolute;
+    font-family: mySecondFont;
+    margin-top:110px;
+    margin-left: 870px;
+    width: 96px;
+    height:25px;
+    background: #4ebee0;
+    color: white;
+    border-radius: 2px;
+    white-space: nowrap;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.book-today:hover{
+    background: #33B8CD;
+}
+
+
+
+
+/*--------------------------- App Section -------------------------------*/
+
+.gradient-rectangle-background{
+    position: fixed;
+    margin-top: 2230px;
+    margin-left:360px;
+    background-image: linear-gradient(to right, #4ebee0, #4ad54c);
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1150px;
+    border-radius: 15px;
+}
+
+.gradient-circle-background{
+   position: absolute;
+   background: white;
+   border: black white 3px;
+   width:250px;
+   height:250px;
+   margin-top:0px;
+   margin-left: 900px;
+   border-radius: 0px 0px 300px 0px; 
+   color:black;
+   transform: rotate(90deg);
+   opacity: 0.25;
+   z-index: 100;
+}
+
+.gradient-circle-background2{
+    position: absolute;
+    background: white;
+    border: black white 3px;
+    width:125px;
+    height:250px;
+    margin-top:200px;
+    margin-left: 400px;
+    border-radius: 0px 300px 300px 0px; 
+    color:black;
+    transform: rotate(270deg);
+    opacity: 0.25;
+    z-index: 100;
+}
+
+.gradient-circle-background3{
+    position: absolute;
+    background: white;
+    border: black white 3px;
+    width: 75px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: 600px;
+    border-radius: 50%; 
+    color:black;
+    transform: rotate(270deg);
+    opacity: 0.25;
+    z-index: 100;
+}
+
+.gradient-circle-background4{
+    position: absolute;
+    background: white;
+    border: black white 3px;
+    width: 125px;
+    height: 125px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0px 0px 300px 0px; 
+    color:black;
+    transform: rotate(deg);
+    opacity: 0.25;
+    z-index: 100;
+}
+
+.gradient-circle-background5{
+    position: absolute;
+    background: white;
+    border: black white 3px;
+    width: 25px;
+    height: 25px;
+    margin-top: 230px;
+    margin-left: 170px;
+    border-radius: 50%; 
+    color:black;
+    transform: rotate(270deg);
+    opacity: 0.25;
+    z-index: 100;
+}
+
+.iphone-app{
+    position:  absolute;
+    margin-top: -60px;
+    margin-left:590px;
+    height:500px;
+    z-index:600;
+}
+
+.iphone-app-display{
+    position: absolute;
+    width:  230px;
+    height:470px;
+    background: #4ebee0;
+    margin-left: 640px;
+    margin-top: -55px;
+    border-radius: 30px;
+    z-index: 500;
+}
+
+.iphone-app-display-aerovista{
+    color:white;
+    margin-top: 210px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family: myFirstFont;
+}
+
+.slogan{
+    margin-left: 3px;
+    color:white;
+    font-size: 11px;
+}
+
+.iphone-app2{
+    position: absolute;
+    margin-top: -20px;
+    margin-left:740px;
+    height:430px;
+    z-index: 200;
+}
+
+.temporary-app2{
+    position: absolute ;
+    margin-left: 780px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.download-our-app{
+    position: absolute;
+    font-family: myThirdFont;
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    margin-top: 72px;
+    margin-left: 80px;
+}
+
+.info-our-app{
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    margin-top:140px;
+    margin-left: 210px;
+    width:250px;
+    z-index: 200;
+}
+
+.terms-conditions{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-family: myThirdFont;
+    font-size: 10px;
+    margin-top:220px;
+    margin-left: 210px;
+    text-decoration: underline;
+}
+
+.qr-fake{
+    position: absolute;
+    height:100px;
+    width: 100px;
+    margin-top:140px;
+    margin-left:90px;
+    border-radius: 10px;
+    opacity: 0.83;
+    z-index:300;
+}
+
+.google-play{
+    position: absolute;
+    width: 170px;
+    margin-top: 260px;
+    margin-left: 80px;
+}
+
+.apple-store{
+    position: absolute;
+    width: 170px;
+    margin-top: 227px;
+    margin-left: 280px;
+    height:130px;
+    width: 140px;
+    z-index: 200;
+}
+
+/*---------------------------- why fly with us and extra bits ---------------------------------*/
+
+.book-with-us{
+    white-space: nowrap;
+    width: inherit;
+    color: #404040;
+    margin-top: 800px;
+    margin-left: 360px;
+    margin-right: 900px;
+    font-size: 25px;
+}
+
+.heading-book-with-us{
+    white-space: nowrap;
+    font-size: 30px;
+}
+
+.book-with-us-paragraph{
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 13px 0px;
+}
+
+.additional-questions{
+    white-space: nowrap;
+    width: inherit;
+    color: #404040;
+    margin-top: 70px;
+    margin-left: 360px;
+    margin-right: 900px;
+    font-size: 25px;
+}
+
+.heading-additional-questions{
+    white-space: nowrap;
+    font-size: 25px;
+}
+
+.paragraph-additional-questions{
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 13px 0px;
+}
+
+/*------------------ sign up to newsletter---------------------*/
+
+.color-peach{
+    position: absolute;
+    background: #FCEAD9;
+    margin-top: 150px;
+    width: 1903px;
+    height: 400px;
+    white-space: nowrap;
+}
+
+.header-sign-up-container{
+    margin-top: 150px;
+    margin-left: 610px;
+     white-space: nowrap
+}
+
+.header-sign-up{
+    font-size: 50px;
+    color: black;
+}
+
+.description-sign-up{
+    margin-top: 20px;
+    margin-left:-680px;
+    text-align: center;
+    white-space: nowrap
+}
+
+.search-sign-up{
+    margin-top: 25px;
+    margin-left: px;
+    padding:10px;
+    width: 450px;
+    white-space: nowrap
+}
+
+.subscribe-sign-up{
+    background: #FADA5F;
+    margin-left: 480px;
+    margin-top: -40px;
+    width: 80px;
+    height:20px;
+    padding: 10px;
+     white-space: nowrap;
+     border-radius: 10px;
+     cursor: pointer;
+}
+
+.letter{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 860px;
+    width:90px;
+}
